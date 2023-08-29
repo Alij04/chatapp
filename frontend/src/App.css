@@ -40,11 +40,12 @@
 
 .sb-header
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
   padding: 5px 8px;
+  margin: 10px;
   align-items: center;
   border-radius: 20px;
-  margin: 20px;
   justify-content: space-between;
   display: flex;
   flex: 0.1;
@@ -52,10 +53,11 @@
 
 .sb-search
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  background-color: white;
-  padding: 4px 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-color: white;
+  padding: 4px ;
   border-radius: 20px;
-  margin: 20px;
+  margin: 10px;
   flex: 0.1;
   display: flex;
   align-items: center;
@@ -71,6 +73,19 @@ column-gap: 10px;
 border-radius: 20px;
 padding: 5px;
 margin: 10px;
+transition-duration: 0.5s;
+}
+
+.con-container:hover
+{
+  background-color: #d9d9d9;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.con-container:active
+{
+background-color: white;
 }
 
 .con-icon
@@ -126,11 +141,11 @@ margin: 10px;
 
 .sb-conversations
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
   padding: 5px 8px;
   border-radius: 20px;
-  margin: 20px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -175,11 +190,12 @@ margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 12px ;
+  margin: 12px;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 20px;
   gap: 10px;
-  margin: 12px;
 }
 .ca-header-left
 {
@@ -199,7 +215,8 @@ margin: 10px;
 }
 .ca-messages
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
      overflow: scroll;
   scrollbar-width: none;
   flex: 1;
@@ -243,6 +260,10 @@ margin: 10px;
   background-color: #63d7b0;
 }
 
+.users
+{
+  margin-top: 50px;
+}
 .other-text-content *
 {
   margin-left: 5px;
@@ -261,7 +282,8 @@ margin: 10px;
 
 .ca-searchBox
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   padding: 10px;
   margin: 15px;
   gap: 10px;
   display: flex;
@@ -277,6 +299,8 @@ margin: 10px;
   flex: 0.7;
   overflow: scroll;
 }
+
+
 .online-users-container::-webkit-scrollbar
 {
  display: none;
@@ -285,7 +309,8 @@ margin: 10px;
 
 .ou-header
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   padding: 10px;
 
   background-color: white;
   display: flex;
@@ -301,7 +326,8 @@ margin: 10px;
 
 .user-style
 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
 
   background-color: white;
   display: flex;
@@ -337,7 +363,8 @@ margin: 10px;
   width: 90vw;
   background-color: #f4f5f8;
   border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .login-logo
 {

@@ -3,27 +3,27 @@ import logo from '../images/logo.png'
 import User from './User'
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
-function OnlineUsers() {
+function Groups() {
 
-    const [users, setUsers] = useState
+    const [groups, setGroups] = useState
         ([
             {
-                name: "User1"
+                name: "Group1"
             },
             {
-                name: "User2"
+                name: "Group2"
             },
             {
-                name: "User3"
+                name: "Group3"
             },
             {
-                name: "User4"
+                name: "Group4"
             },
             {
-                name: "User5"
+                name: "Group5"
             },
             {
-                name: "User6"
+                name: "Group6"
             },
         ]
         )
@@ -33,7 +33,7 @@ function OnlineUsers() {
 
             <div className="ou-header">
                 <img src={logo} alt="logo" style={{ height: "50px", marginLeft: "20px" }} />
-                <p>Online Users</p>
+                <p>Available Groups</p>
             </div>
             <div className="sb-search">
                 <IconButton>
@@ -41,14 +41,11 @@ function OnlineUsers() {
                 </IconButton>
                 <input type="text" className='searchBox' placeholder='Search' />
             </div>
-            <div className="users" >
-                {users.map((user) => {
-                    return <User props={user} key={user.name} />
-                })}
-            </div>
-
+            {groups.map((group) => {
+                return <User props={group} key={group.name} />
+            })}
         </div>
     )
 }
 
-export default OnlineUsers
+export default Groups

@@ -4,7 +4,15 @@ import SendIcon from '@mui/icons-material/Send';
 import { IconButton } from '@mui/material';
 import MessageOthers from './MessageOthers';
 import MessageSelf from './MessageSelf';
-function ChatArea({ props }) {
+function ChatArea() {
+
+    const props = {
+        name: "User1",
+        lastMessage: "Last Message",
+        timeStamp: 'today'
+
+    }
+
 
 
     return (
