@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import ChatArea from './ChatArea'
 import Welcome from './Welcome'
 import CreateGroups from './CreateGroups'
+import OnlineUsers from './OnlineUsers'
 export default function MainContainer() {
 
     const conversations = {
@@ -19,7 +20,8 @@ export default function MainContainer() {
             <Sidebar />
             {/* <CreateGroups /> */}
             {/* <Welcome /> */}
-            <ChatArea props={conversations} />
+            {/* <ChatArea props={conversations} /> */}
+            <OnlineUsers />
         </div>
     )
 }
