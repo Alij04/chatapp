@@ -10,8 +10,12 @@ import { IconButton } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ConvserationItem from './ConvserationItem';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../Features/themeSlice';
 function Sidebar() {
-    const [lightTheme, setlightTheme] = useState(true);
+    const lightTheme = useSelector(state => state.themeKey);
+    const dispatch = useDispatch();
+
     const [conversations, setConversations] = useState(
         [
             {
@@ -58,22 +62,20 @@ function Sidebar() {
                     }}>
                         <AddCircleIcon className={"icon " + (lightTheme ? " " : "dark")} />
                     </IconButton>
-                    <IconButton onClick={() => {
-                        setlightTheme(!lightTheme)
-                    }}>
+                    <IconButton onClick={() => { dispatch(toggleTheme()) }} >
                         {lightTheme && <NightlightIcon className={"icon " + (lightTheme ? " " : "dark")} />}
                         {!lightTheme && <LightModeIcon className={"icon " + (lightTheme ? " " : "dark")} />}
                     </IconButton>
                 </div>
 
             </div>
-            <div className="sb-search">
+            <div className={"sb-search " + (lightTheme ? " " : "dark")}>
                 <IconButton>
                     <SearchIcon />
                 </IconButton>
-                <input type="text" className='searchBox' placeholder='Search' />
+                <input type="text" className={"searchBox " + (lightTheme ? " " : "dark")} placeholder='Search' />
             </div>
-            <div className="sb-conversations">
+            <div className={"sb-conversations " + (lightTheme ? " " : "dark")}>
                 {conversations.map((conversation) => {
                     return <ConvserationItem props={conversation} key={conversation.name} />
                 })}

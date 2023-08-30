@@ -15,6 +15,7 @@
   color: whitesmoke !important;
 }
 
+
 .app 
 {
   background-color: #dddedd;
@@ -67,10 +68,10 @@
 {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    background-color: white;
-  padding: 4px ;
+   padding: 4px;
   border-radius: 20px;
   margin: 10px;
-  flex: 0.1;
+  flex: 0.06;
   display: flex;
   align-items: center;
 }
@@ -144,6 +145,7 @@ background-color: white;
 
 .searchBox
 {
+
   outline-width: 0;
   border: none;
   font-size: 1.25rem;
@@ -162,7 +164,7 @@ background-color: white;
   flex-direction: column;
   overflow: scroll;
   scrollbar-width: none;
-  flex: 0.8;
+  flex: 0.84;
 }
 
 .welcome-logo
@@ -193,6 +195,7 @@ background-color: white;
 {
   display: flex;
   flex: 0.7;
+  border-radius: 20px;
   flex-direction: column;
 }
 
@@ -353,6 +356,8 @@ background-color: white;
 }
 .create-groups-container
 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
  flex: 0.7;
  align-self: center; 
  background-color: white;

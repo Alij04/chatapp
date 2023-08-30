@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import logo from '../images/logo.png'
 import User from './User'
+import GroupsIcon from '@mui/icons-material/Groups';
+import { useSelector } from 'react-redux';
+
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
 function Groups() {
 
+    const lightTheme = useSelector(state => state.themeKey)
+    console.log(lightTheme)
     const [groups, setGroups] = useState
         ([
             {
@@ -31,15 +35,15 @@ function Groups() {
 
         <div className='online-users-container'>
 
-            <div className="ou-header">
-                <img src={logo} alt="logo" style={{ height: "50px", marginLeft: "20px" }} />
+            <div className={"ou-header " + (lightTheme ? " " : "dark")}>
+                <GroupsIcon style={{ padding: "10px", width: "2rem", height: "2rem" }} />
                 <p>Available Groups</p>
             </div>
-            <div className="sb-search">
+            <div className={"sb-search " + (lightTheme ? " " : "dark")}>
                 <IconButton>
                     <SearchIcon />
                 </IconButton>
-                <input type="text" className='searchBox' placeholder='Search' />
+                <input type="text" className={"searchBox " + (lightTheme ? " " : "dark")} placeholder='Search' />
             </div>
             {groups.map((group) => {
                 return <User props={group} key={group.name} />
